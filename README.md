@@ -9,10 +9,10 @@ The Complete functional test of the mersys.io application which in the education
 NAME | E-MAIL | GITHUB
 --- | --- | ---
 Senol Dogan   | senoldogan2018@gmail.com |https://github.com/DoganSenol
-Malik Isakov  | malik@gmail.com          |https://github.com/isakov-m
+Malik Isakov  | ksumaihl@gmail.com       |https://github.com/isakov-m
 Emre Kargi    | emre@gmail.com           |https://github.com/Emrekrgi
 Onur Yüksek   | onur@gmail.com           |https://github.com/onur2220
-Murat Yaris   | murat@gmail.com          |https://github.com/yaris404
+Murat Yaris   | geomury48.@gmail.com     |https://github.com/yaris404
 Tuba Caglar   | tuba@gmail.com           |https://github.com/TubaCaglar
 
 ---
