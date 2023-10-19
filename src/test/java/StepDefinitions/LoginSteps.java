@@ -3,28 +3,26 @@ package StepDefinitions;
 import Pages.DialogPage;
 import Pages.LoginPage;
 import Utilities.BaseDriver;
+import Utilities.ConfigReader;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
 
+import java.io.IOException;
 import java.util.List;
 
-public class LoginSteps {
+public class LoginSteps extends ConfigReader {
     LoginPage lp = new LoginPage();
     DialogPage dp = new DialogPage();
 
     @Given("Navigate to website")
-    public void navigateToWebsite() {
-        BaseDriver.getDriver().get("https://test.mersys.io/");
+    public void navigateToWebsite() throws IOException {
+        BaseDriver.getDriver().get(getUrl());
     }
-
     @And("Enter username that as {string} and password that as {string}")
-    public void enterUsernameThatAsAndPasswordThatAs(String username, String password) {
-        lp.mySendKeys(lp.userNameInput, "turkeyts");
-        lp.mySendKeys(lp.passwordInput, "TechnoStudy123");
+    public void enterUsernameThatAsAndPasswordThatAs(String username, String password) throws IOException {
+        lp.mySendKeys(lp.userNameInput, getUsername());
+        lp.mySendKeys(lp.passwordInput, getPassword());
     }
 
     @When("Click login button")
