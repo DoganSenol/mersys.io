@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.BaseDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -24,6 +25,11 @@ public class Methods {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElement(element);
         element.click();
+    }
+
+    public  void loadWait(WebElement element){
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+
     }
 
     public void mySendKeys(WebElement element,String text){
