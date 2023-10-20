@@ -15,7 +15,7 @@ public class BaseDriver {
 
     private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
 
-    public static ThreadLocal<String> thredBrowserName = new ThreadLocal<>();
+    public static ThreadLocal<String> threadBrowserName = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
 
@@ -25,11 +25,12 @@ public class BaseDriver {
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
 
-        if (thredBrowserName.get() == null)
-            thredBrowserName.set("chrome");
+        if (threadBrowserName.get() == null) {
+            threadBrowserName.set("chrome");
+        }
 
         if (threadDriver.get() == null) {
-            switch (thredBrowserName.get()) {
+            switch (threadBrowserName.get()) {
                 case "firefox":
                     threadDriver.set(new FirefoxDriver());
                     break;
@@ -66,6 +67,13 @@ public class BaseDriver {
             threadDriver.set(driver);
         }
 
+    }
+    public static String getThreadBrowserName() {
+        return threadBrowserName.get();
+    }
+
+    public static void setThreadBrowserName(String browser) {
+        threadBrowserName.set(browser);
     }
 
 }
