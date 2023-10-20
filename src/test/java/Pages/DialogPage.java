@@ -27,6 +27,18 @@ public class DialogPage extends Methods {
     public WebElement successMessage;
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExist;
+    @FindBy(xpath="//mat-form-field//input[@data-placeholder='Name']")
+    public WebElement fieldNameInput;
+    @FindBy(xpath="//span[text()='Search']")
+    public WebElement searchButton;
+
+    @FindBy(css="button[color='accent']")
+    public WebElement editButton;
+
+
+
+
+
 
 
 
@@ -44,6 +56,9 @@ public class DialogPage extends Methods {
             case "saveButton": return this.saveButton;
             case "successMessage": return this.successMessage;
             case "alreadyExist": return this.alreadyExist;
+            case "fieldNameInput": return this.fieldNameInput;
+            case "editButton": return this.editButton;
+
 
 
 
