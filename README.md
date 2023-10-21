@@ -1,5 +1,6 @@
 # io.mersys
 # Used Technologys
+# We use JAVA, TestNG, Cucumber, Gherkin and other JAVA Tools on this project.
 ![Maven Central](https://img.shields.io/maven-central/v/org.seleniumhq.selenium/selenium-java?versionSuffix=4.11.0&style=%20for-the-badge&logo=Selenium&label=Selenium&labelColor=black&color=grey)
 ![Maven Central](https://img.shields.io/maven-central/v/io.cucumber/cucumber-java?versionSuffix=7.9.0&style=%20for-the-badge&logo=Cucumber&label=Cucumber&labelColor=black&color=grey)
 ![Maven Central](https://img.shields.io/maven-central/v/org.testng/testng?versionSuffix=6.14.3&style=%20for-the-badge&logo=testng&label=TestNG&labelColor=black&color=grey)
@@ -9,16 +10,61 @@
 ![Maven Central](https://img.shields.io/maven-central/v/org.apache.poi/poi?versionSuffix=4.1.0&style=%20for-the-badge&label=ApachePOI&labelColor=black&color=grey)
 
 
+List of Dependencies
+----------------
+
+| Package      | Description                           |
+|--------------|---------------------------------------|
+| TestNG       | Next Generation Testing Tool.         |
+| Selenium     | Browser Automation Framework.         |
+| slf4j        | The Simple Logging Facade for Java.   |
+| commons.io   | The Apache Commons IO library.        |
+| cucumber     | Cucumber is a tool that supports BDD. |
+| grasshopper  | HTML & PDF Report tool.               |
+
+## File Structure
+```bash
+|-- src
+|   |-- main
+|       |-- java
+|       |-- resources
+|
+|   |-- test
+|       |-- java
+|           |-- ApachePOI
+|           |-- FeatureFiles
+|               |-- Feature Files
+|           |-- Pages
+|               |-- DialogPage, EducationPage, LoginPage, Methods
+|           |-- Runners
+|               |-- TestRunnerAll
+|               |-- TestRunnerHR
+|               |-- TestRunnerLogin
+|               |-- TestRunnerRegression
+|               |-- TestRunnerSmoke
+|           |-- StepDefinitions
+|               |-- Hooks
+|               |-- * Test Class Files
+|           |-- Utilities
+|               |-- BaseDriver
+|               |-- Config
+|               |-- ExcelUtility
+|       |-- resources
+|       |-- results
+|           |-- reports*
+|           |-- .gitignore
+|
+|-- .gitignore
+|-- pom.xml
+
+```
 
 
 
 
-
-
-
----
 
 ## CONTRIBUTERS:
+--------------------------------------------------
 
 NAME | E-MAIL | GITHUB
 --- | --- | ---
