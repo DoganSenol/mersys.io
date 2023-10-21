@@ -49,15 +49,14 @@ public class AddSubjectCategoriesSteps {
     public void userSearchTheCategorySearchTextAs(String searchtext) throws InterruptedException {
 
         dp.mySendKeys(dp.fieldNameInput, searchtext);
-        dp.myClick(dp.searchButton);
-       Thread.sleep(2000);
-        dp.myClick(dp.editButton);
+
 
 
     }
     @And("User Edit  New Subject Categories name as {string} and code as {string}")
     public void userEditNewSubjectCategoriesNameAsAndCodeAs(String name, String code) {
 
+        dp.ClickEditButton();
         dp.mySendKeys(dp.nameInput, name);
         dp.mySendKeys(dp.codeInput, code);
         dp.myClick(dp.saveButton);

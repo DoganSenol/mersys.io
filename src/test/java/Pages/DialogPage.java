@@ -1,9 +1,11 @@
 package Pages;
 
 import Utilities.BaseDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class DialogPage extends Methods {
     public DialogPage() {
@@ -35,6 +37,12 @@ public class DialogPage extends Methods {
     @FindBy(css="button[color='accent']")
     public WebElement editButton;
 
+    public void ClickEditButton() {
+        myClick(searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//button[@class='mdc-button mat-mdc-button mat-accent mat-flat-button mat-mdc-button-base']"), 0));
+        myClick(editButton);
+
+    }
 
 
 
@@ -44,8 +52,7 @@ public class DialogPage extends Methods {
 
 
 
-
-    public WebElement getWebElement(String stringElement){
+        public WebElement getWebElement(String stringElement){
         switch (stringElement){
 
             case "loginVerify": return this.loginVerify;

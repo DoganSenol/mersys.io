@@ -16,11 +16,11 @@ Feature: Add Subjects functionality
     Then  Already exist message should be displayed
     Examples:
 
-      | name          | code |
-      | Programming12 | PR12 |
-      | Gaming12      | GM12 |
-      | History12     | HS12 |
-      | English12     | EN12 |
+      | name | code |
+      | aaa1 | a12  |
+      | bbb1 | b12  |
+      | ccc1 | c12  |
+      | ddd1 | d12  |
 
   Scenario Outline: The User Edit Subject Categories under Education
     When User Click to Education
@@ -31,8 +31,8 @@ Feature: Add Subjects functionality
 
 
     Examples:
-      | name          | searchText | code |
-      | Programming12 | Physik     | Ps   |
-      | Gaming12      | Sport      | St   |
-      | History12     | Erdkunde   | Ek   |
-      | English12     | Geschicte  | Gt   |
+      | name | searchText | code |
+      | rt   | aaa1       | srt |
+      | bt   | bbb1       | trt |
+      | gt   | ccc1       | krt |
+      | ht   | ddd1       | trt |
