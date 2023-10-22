@@ -69,4 +69,14 @@ public class AddSubjectCategoriesSteps {
     public void subjectCategorySuccessfullyUpdatedMessageShouldBeDisplayed() {
         dp.verifyContainsText(dp.successMessage, "success");
     }
+
+    @And("User Delete The Subject Categories")
+    public void userDeleteTheSubjectCategories() throws InterruptedException {
+        dp.ClickDeleteIcon();
+    }
+
+    @Then("Subject Category successfully deleted message should be displayed")
+    public void subjectCategorySuccessfullyDeletedMessageShouldBeDisplayed() {
+        dp.verifyContainsText(dp.successMessage, "success");
+    }
 }

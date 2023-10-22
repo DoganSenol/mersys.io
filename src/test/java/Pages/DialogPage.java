@@ -31,20 +31,33 @@ public class DialogPage extends Methods {
     public WebElement alreadyExist;
     @FindBy(xpath="//mat-form-field//input[@data-placeholder='Name']")
     public WebElement fieldNameInput;
-    @FindBy(xpath="//span[text()='Search']")
+    @FindBy(xpath="//ms-search-button//button")
     public WebElement searchButton;
-
     @FindBy(css="button[color='accent']")
     public WebElement editButton;
+    @FindBy(css="button[color='warn']")
+    public WebElement deleteIcon;
+    @FindBy(xpath="//button[@color='accent' and @type='submit']")
+    public WebElement deleteButton;
+
+
 
     public void ClickEditButton() {
         myClick(searchButton);
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//button[@class='mdc-button mat-mdc-button mat-accent mat-flat-button mat-mdc-button-base']/*"), 0));
         myScriptClick(editButton);
 
+    }
 
+    public void ClickDeleteIcon() throws InterruptedException {
+        myClick(searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//button[@class='mdc-button mat-mdc-button mat-accent mat-flat-button mat-mdc-button-base']/*"), 0));
+        Thread.sleep(1000);
+        myClick(deleteIcon);
+        myClick(deleteButton);
 
     }
+
 
 
 

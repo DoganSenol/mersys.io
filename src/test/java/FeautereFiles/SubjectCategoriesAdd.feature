@@ -37,3 +37,18 @@ Feature: Add Subjects functionality
       | maha | johan      | er2  |
       | taha | cisse      | er3  |
       | oha  | abdul      | er4  |
+
+  Scenario Outline: The User Delete Subject Categories under Education
+    When User Click to Education
+    Then User CLick to Setup
+    Then User Click to Subject Categories
+    And  User Search the Category searchText as "<searchText>"
+    And  User Delete The Subject Categories
+    Then Subject Category successfully deleted message should be displayed
+
+    Examples:
+      | searchText |
+      | saha       |
+      | maha       |
+      | taha       |
+      | oha        |
