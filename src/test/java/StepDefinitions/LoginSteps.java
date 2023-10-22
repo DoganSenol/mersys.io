@@ -5,10 +5,17 @@ import Pages.LoginPage;
 import Utilities.BaseDriver;
 import Utilities.ConfigReader;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 public class LoginSteps extends ConfigReader {
@@ -19,6 +26,7 @@ public class LoginSteps extends ConfigReader {
     public void navigateToWebsite() throws IOException {
         BaseDriver.getDriver().get(getUrl());
     }
+
     @And("Enter username that as {string} and password that as {string}")
     public void enterUsernameThatAsAndPasswordThatAs(String username, String password) throws IOException {
         lp.mySendKeys(lp.userNameInput, getUsername());

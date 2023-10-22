@@ -22,7 +22,9 @@ public class DialogPage extends Methods {
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
     public WebElement codeInput;
     @FindBy(css = "[class='mdc-switch mdc-switch--selected mdc-switch--checked']")
-    public WebElement activeDisableButton;
+    public WebElement activeButtonOn;
+    @FindBy(css = " [class='mdc-switch mdc-switch--unselected']")
+    public WebElement activeButtonOff;
     @FindBy(xpath="//ms-save-button/button")
     public WebElement saveButton;
     @FindBy(xpath="//div[contains(text(),'successfully')]")
@@ -42,9 +44,10 @@ public class DialogPage extends Methods {
 
 
 
-    public void ClickEditButton() {
+    public void ClickEditButton() throws InterruptedException {
         myClick(searchButton);
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//button[@class='mdc-button mat-mdc-button mat-accent mat-flat-button mat-mdc-button-base']/*"), 0));
+        Thread.sleep(1000);
         myScriptClick(editButton);
 
     }
@@ -62,19 +65,14 @@ public class DialogPage extends Methods {
 
 
 
-
-
-
-
-
-        public WebElement getWebElement(String stringElement){
+    public WebElement getWebElement(String stringElement){
         switch (stringElement){
 
             case "loginVerify": return this.loginVerify;
             case "AddButton": return this.AddButton;
             case "nameInput": return this.nameInput;
             case "codeInput": return this.codeInput;
-            case "activeDisableButton": return this.activeDisableButton;
+            case "activeButtonOff": return this.activeButtonOff;
             case "saveButton": return this.saveButton;
             case "successMessage": return this.successMessage;
             case "alreadyExist": return this.alreadyExist;

@@ -2,11 +2,9 @@ package StepDefinitions;
 
 import Pages.DialogPage;
 import Pages.EducationPage;
-import Utilities.BaseDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.interactions.Actions;
 
 public class AddSubjectCategoriesSteps {
 
@@ -33,7 +31,8 @@ public class AddSubjectCategoriesSteps {
         dp.myClick(dp.AddButton);
         dp.mySendKeys(dp.nameInput, name);
         dp.mySendKeys(dp.codeInput, code);
-        dp.myClick(dp.activeDisableButton);
+        dp.myClick(dp.activeButtonOn);
+        dp.myClick(dp.activeButtonOff);
         dp.myClick(dp.saveButton);
     }
 
@@ -56,12 +55,11 @@ public class AddSubjectCategoriesSteps {
     }
 
     @And("User Edit  New Subject Categories name as {string} and code as {string}")
-    public void userEditNewSubjectCategoriesNameAsAndCodeAs(String name, String code)  {
+    public void userEditNewSubjectCategoriesNameAsAndCodeAs(String name, String code) throws InterruptedException {
 
         dp.ClickEditButton();
         dp.mySendKeys(dp.nameInput, name);
         dp.mySendKeys(dp.codeInput, code);
-        dp.myClick(dp.activeDisableButton);
         dp.myClick(dp.saveButton);
     }
 
