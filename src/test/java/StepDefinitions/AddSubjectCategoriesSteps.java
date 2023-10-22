@@ -2,15 +2,16 @@ package StepDefinitions;
 
 import Pages.DialogPage;
 import Pages.EducationPage;
+import Utilities.BaseDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.interactions.Actions;
 
 public class AddSubjectCategoriesSteps {
 
-    DialogPage dp=new DialogPage();
-    EducationPage ep=new EducationPage();
+    DialogPage dp = new DialogPage();
+    EducationPage ep = new EducationPage();
 
     @When("User Click to Education")
     public void userClickToEducation() {
@@ -28,10 +29,11 @@ public class AddSubjectCategoriesSteps {
     }
 
     @And("User Create  New Subject Categories name as {string} and code as {string}")
-    public void userCreateNewSubjectCategoriesNameAsAndCodeAs(String name, String code){
+    public void userCreateNewSubjectCategoriesNameAsAndCodeAs(String name, String code) throws InterruptedException {
         dp.myClick(dp.AddButton);
         dp.mySendKeys(dp.nameInput, name);
         dp.mySendKeys(dp.codeInput, code);
+        dp.myClick(dp.activeDisableButton);
         dp.myClick(dp.saveButton);
     }
 
@@ -46,19 +48,25 @@ public class AddSubjectCategoriesSteps {
     }
 
     @And("User Search the Category searchText as {string}")
-    public void userSearchTheCategorySearchTextAs(String searchtext) throws InterruptedException {
+    public void userSearchTheCategorySearchTextAs(String searchtext) {
 
         dp.mySendKeys(dp.fieldNameInput, searchtext);
 
 
-
     }
+
     @And("User Edit  New Subject Categories name as {string} and code as {string}")
-    public void userEditNewSubjectCategoriesNameAsAndCodeAs(String name, String code) {
+    public void userEditNewSubjectCategoriesNameAsAndCodeAs(String name, String code)  {
 
         dp.ClickEditButton();
         dp.mySendKeys(dp.nameInput, name);
         dp.mySendKeys(dp.codeInput, code);
+        dp.myClick(dp.activeDisableButton);
         dp.myClick(dp.saveButton);
+    }
+
+    @Then("Subject Category successfully updated message should be displayed")
+    public void subjectCategorySuccessfullyUpdatedMessageShouldBeDisplayed() {
+        dp.verifyContainsText(dp.successMessage, "success");
     }
 }

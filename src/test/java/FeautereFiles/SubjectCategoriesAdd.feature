@@ -16,11 +16,11 @@ Feature: Add Subjects functionality
     Then  Already exist message should be displayed
     Examples:
 
-      | name | code |
-      | aaa1 | a12  |
-      | bbb1 | b12  |
-      | ccc1 | c12  |
-      | ddd1 | d12  |
+      | name  | code |
+      | pedro | ped  |
+      | johan | joh  |
+      | cisse | cis  |
+      | abdul | abd  |
 
   Scenario Outline: The User Edit Subject Categories under Education
     When User Click to Education
@@ -28,11 +28,12 @@ Feature: Add Subjects functionality
     Then User Click to Subject Categories
     And  User Search the Category searchText as "<searchText>"
     And   User Edit  New Subject Categories name as "<name>" and code as "<code>"
+    Then  Subject Category successfully updated message should be displayed
 
 
     Examples:
       | name | searchText | code |
-      | rt   | aaa1       | srt |
-      | bt   | bbb1       | trt |
-      | gt   | ccc1       | krt |
-      | ht   | ddd1       | trt |
+      | saha | pedro      | er1  |
+      | maha | johan      | er2  |
+      | taha | cisse      | er3  |
+      | oha  | abdul      | er4  |
