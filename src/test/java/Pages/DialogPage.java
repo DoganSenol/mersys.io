@@ -21,7 +21,7 @@ public class DialogPage extends Methods {
     public WebElement nameInput;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
     public WebElement codeInput;
-    @FindBy(xpath = "(//*[@class='mdc-switch__icon mdc-switch__icon--off'])[9]")
+    @FindBy(css = "[class='mdc-switch mdc-switch--selected mdc-switch--checked']")
     public WebElement activeDisableButton;
     @FindBy(xpath="//ms-save-button/button")
     public WebElement saveButton;
@@ -39,8 +39,10 @@ public class DialogPage extends Methods {
 
     public void ClickEditButton() {
         myClick(searchButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//button[@class='mdc-button mat-mdc-button mat-accent mat-flat-button mat-mdc-button-base']"), 0));
-        myClick(editButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//button[@class='mdc-button mat-mdc-button mat-accent mat-flat-button mat-mdc-button-base']/*"), 0));
+        myScriptClick(editButton);
+
+
 
     }
 
