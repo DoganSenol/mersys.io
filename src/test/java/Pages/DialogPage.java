@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class DialogPage extends Methods {
     public DialogPage() {
         PageFactory.initElements(BaseDriver.getDriver(), this);
@@ -21,9 +23,10 @@ public class DialogPage extends Methods {
     public WebElement nameInput;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
     public WebElement codeInput;
-    @FindBy(css = "[class='mdc-switch mdc-switch--selected mdc-switch--checked']")
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']//button[@class='mdc-switch mdc-switch--selected mdc-switch--checked']")
     public WebElement activeButtonOn;
-    @FindBy(css = " [class='mdc-switch mdc-switch--unselected']")
+
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']//button[@class='mdc-switch mdc-switch--unselected']")
     public WebElement activeButtonOff;
     @FindBy(xpath="//ms-save-button/button")
     public WebElement saveButton;
@@ -41,6 +44,16 @@ public class DialogPage extends Methods {
     public WebElement deleteIcon;
     @FindBy(xpath="//button[@color='accent' and @type='submit']")
     public WebElement deleteButton;
+    @FindBy(xpath="//ms-text-field[@formcontrolname='shortName']//input")
+    public WebElement shortNameInput;
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='capacity']/input")
+    public WebElement capacityInput;
+    @FindBy(xpath="(//mat-select[@role='combobox'])[2]")
+    public WebElement selectButton;
+    @FindBy(xpath="//span[text()=' Laboratory ']")
+    public WebElement laboratoryText;
+    @FindBy(xpath="//mat-option/span")
+    public List< WebElement> locationType;
 
 
 
@@ -278,11 +291,19 @@ public class DialogPage extends Methods {
             case "nameInput": return this.nameInput;
             case "codeInput": return this.codeInput;
             case "activeButtonOff": return this.activeButtonOff;
+            case "activeButtonOn": return this.activeButtonOn;
             case "saveButton": return this.saveButton;
             case "successMessage": return this.successMessage;
             case "alreadyExist": return this.alreadyExist;
             case "fieldNameInput": return this.fieldNameInput;
             case "editButton": return this.editButton;
+            case "shortNameInput": return this.shortNameInput;
+            case "capacityInput": return this.capacityInput;
+            case "selectButton": return this.selectButton;
+            case "laboratoryText": return this.laboratoryText;
+            case "locationType": return (WebElement) this.locationType;
+
+
 
 
 
