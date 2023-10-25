@@ -19,10 +19,6 @@ public class EducationPage extends  Methods {
     public WebElement subjectCategoriesLink;
 
 
-
-
-
-
         public WebElement getWebElement(String stringElement){
             switch (stringElement){
 
@@ -34,5 +30,15 @@ public class EducationPage extends  Methods {
             }
             return null;
         }
+
+    // murat
+    @FindBy(xpath = "//span[text()='Human Resources']")
+    public  WebElement humanResources;
+
+    @FindBy(css = "[class='nav-link-title ng-tns-c2089661534-16 ng-star-inserted']")
+    public WebElement setup;
+
+    @FindBy(xpath = "//span[text()='Attestations']")
+    public WebElement attestations;
 
 }
