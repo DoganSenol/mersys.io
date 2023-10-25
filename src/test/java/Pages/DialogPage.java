@@ -34,15 +34,23 @@ public class DialogPage extends Methods {
 
     @FindBy(css="button[color='accent']")
     public WebElement editButton;
-
-
-
-
-
-
-
-
-
+///////////////////////////EMRE////////////////////////
+    @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
+     public WebElement newPositionName;
+    @FindBy(xpath = "(//ms-delete-button//button)[1]")
+    public WebElement deleteImageBtn;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement deleteDialogBtn;
+    @FindBy(xpath = "//ms-edit-button")
+    public WebElement edit;
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ADD')]//button")
+    public WebElement addButton;
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    public WebElement successsMessage;
+    @FindBy(xpath = "//span[text()='Save']")
+    public WebElement saveeButton;
+    @FindBy(css = "[data-placeholder='Name']")
+    public WebElement nameSearch;
 
 
     public WebElement getWebElement(String stringElement){
@@ -58,6 +66,13 @@ public class DialogPage extends Methods {
             case "alreadyExist": return this.alreadyExist;
             case "fieldNameInput": return this.fieldNameInput;
             case "editButton": return this.editButton;
+            case "newPositionName": return this.newPositionName;
+            case "nameSearch": return this.nameSearch;
+            case "deleteImageBtn": return this.deleteImageBtn;
+            case "edit": return this.edit;
+            case "addButton": return this.addButton;
+            case "successsMessage": return this.successsMessage;
+            case "saveeButton": return this.saveeButton;
 
 
 
