@@ -34,7 +34,70 @@ public class DialogPage extends Methods {
 
     @FindBy(css="button[color='accent']")
     public WebElement editButton;
-///////////////////////////EMRE////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ///////////////////////////EMRE////////////////////////
     @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
      public WebElement newPositionName;
     @FindBy(xpath = "(//ms-delete-button//button)[1]")
