@@ -6,6 +6,7 @@ Feature: Add Subjects functionality
     When  Click login button
     Then  Verify that user logged in
 
+  @SmokeTest
   Scenario Outline: The User Add New Subject Categories under Education
     When  User Click to Education
     Then  User CLick to Setup
@@ -16,23 +17,41 @@ Feature: Add Subjects functionality
     Then  Already exist message should be displayed
     Examples:
 
-      | name          | code |
-      | Programming12 | PR12 |
-      | Gaming12      | GM12 |
-      | History12     | HS12 |
-      | English12     | EN12 |
+      | name   | code |
+      | pamuk  | pam  |
+      | seker  | sek  |
+      | helva  | hel  |
+      | pekmez | pek  |
 
+  @SmokeTest
   Scenario Outline: The User Edit Subject Categories under Education
     When User Click to Education
     Then User CLick to Setup
     Then User Click to Subject Categories
     And  User Search the Category searchText as "<searchText>"
     And   User Edit  New Subject Categories name as "<name>" and code as "<code>"
+    Then  Subject Category successfully updated message should be displayed
 
 
     Examples:
-      | name          | searchText | code |
-      | Programming12 | Physik     | Ps   |
-      | Gaming12      | Sport      | St   |
-      | History12     | Erdkunde   | Ek   |
-      | English12     | Geschicte  | Gt   |
+      | searchText | name    | code     |
+      | pamuk      | pedro13 | er123122 |
+      | seker      | johan13 | er233122 |
+      | helva      | cisse13 | er343122 |
+      | pekmez     | abdul13 | er433122 |
+
+  @SmokeTest
+  Scenario Outline: The User Delete Subject Categories under Education
+    When User Click to Education
+    Then User CLick to Setup
+    Then User Click to Subject Categories
+    And  User Search the Category searchText as "<searchText>"
+    And  User Delete The Subject Categories
+    Then Subject Category successfully deleted message should be displayed
+
+    Examples:
+      | searchText |
+      | pedro13    |
+      | johan13    |
+      | cisse13    |
+      | abdul13    |
