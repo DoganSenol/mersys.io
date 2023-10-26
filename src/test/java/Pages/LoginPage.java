@@ -13,7 +13,7 @@ public class LoginPage extends Methods {
     public WebElement userNameInput;
     @FindBy(id = "mat-input-1")
     public WebElement passwordInput;
-    @FindBy(xpath = "//span[text()=' LOGIN ']")
+    @FindBy(css = "button[aria-label='LOGIN']")
     public WebElement loginButton;
     @FindBy(xpath = "//div[ contains( text(), 'Invalid' )  ] ")
     public WebElement inValidUsernamePassword;
