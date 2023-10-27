@@ -112,6 +112,23 @@ public class DialogPage extends Methods {
 
     //////////////////////////////Emre//////////////////////////////////////// 100
 
+    @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
+    public WebElement newPositionName;
+    @FindBy(xpath = "(//ms-delete-button//button)[1]")
+    public WebElement deleteImageBtn;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement deleteDialogBtn;
+    @FindBy(xpath = "//ms-edit-button")
+    public WebElement edit;
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ADD')]//button")
+    public WebElement addButton;
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    public WebElement successsMessage;
+    @FindBy(xpath = "//span[text()='Save']")
+    public WebElement saveeButton;
+    @FindBy(css = "[data-placeholder='Name']")
+    public WebElement nameSearch;
+
 
 
 

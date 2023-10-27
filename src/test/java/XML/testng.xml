@@ -4,7 +4,7 @@
         <parameter name="browserType" value="chrome"></parameter>
 
         <classes>
-            <class name="StepDefinitions.AddSubjectCategoriesSteps"></class>
+            <class name="StepDefinitions.LoginSteps"></class>
         </classes>
 
     </test>
