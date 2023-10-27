@@ -44,6 +44,7 @@ public class US007AddSchoolLocationSteps {
         List<String> strButtonList= buttons.asList(String.class);
         for (int i = 0; i < strButtonList.size(); i++) {
             WebElement linkWebelemet= dP.getWebElement(strButtonList.get(i));
+
             dP.myClick(linkWebelemet);
 
         }
