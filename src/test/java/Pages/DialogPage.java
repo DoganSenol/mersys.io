@@ -75,6 +75,8 @@ public class DialogPage extends Methods {
     }
 
 
+
+
     ///////////////////Tuba/////////////////////////////////////////////// 65.Satir
 
 
