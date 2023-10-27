@@ -3,7 +3,7 @@ Feature: Login functionality
   Background:
     Given Navigate to website
 
-
+  @SmokeTest
   Scenario Outline: Login with invalid username and invalid password
     And Enter username and password
       | userNameInput | <username> |
@@ -21,14 +21,12 @@ Feature: Login functionality
       | TURsEYtS    | alT67s   |
       | TechNOStudy | PlSA452  |
 
-
+  @SmokeTest
 
   Scenario: Login with valid username and blank password
     And  Enter username and  do not enter password
     When Click login button
     Then Verify blank password Error
-
-
 
 
   Scenario Outline: Login with valid username and password

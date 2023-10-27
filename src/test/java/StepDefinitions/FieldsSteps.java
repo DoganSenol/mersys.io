@@ -1,7 +1,7 @@
 package StepDefinitions;
 
-import Pages.AddingFields;
 import Pages.DialogPage;
+import Pages.LeftBar;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,8 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class FieldsSteps {
-    AddingFields af=new AddingFields();
+   // AddingFields af=new AddingFields();
+    LeftBar lb=new LeftBar();
     DialogPage dp=new DialogPage();
 
     @io.cucumber.java.en.
@@ -19,8 +20,8 @@ public class FieldsSteps {
 
         List<String> strLinkList = links.asList(String.class);
         for (int i = 0; i < strLinkList.size(); i++) {
-            WebElement linkWebElement = af.getWebElement(strLinkList.get(i));
-            af.myClick(linkWebElement);
+            WebElement linkWebElement = lb.getWebElement(strLinkList.get(i));
+            lb.myClick(linkWebElement);
         }
 
 

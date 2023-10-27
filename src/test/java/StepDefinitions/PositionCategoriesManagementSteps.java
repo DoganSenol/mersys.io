@@ -1,8 +1,7 @@
 package StepDefinitions;
 
 import Pages.DialogPage;
-import Pages.LoginPage;
-import Pages.Position_LeftNav;
+import Pages.LeftBar;
 import Utilities.BaseDriver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -15,29 +14,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class Position {
+public class PositionCategoriesManagementSteps {
 
-
-    Position_LeftNav ln = new Position_LeftNav();
-    LoginPage lp = new LoginPage();
+    LeftBar lb=new LeftBar();
     DialogPage dp = new DialogPage();
 
 
     public WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
 
-    String positionNameStr = "Jon123";
-    String newpositionNameStr = "Bravo";
+    String positionNameStr = "Jon1233";
+    String newpositionNameStr = "Bravoe";
 
     @When("the user navigates to position categories")
-    public void theUserNavigatesToPositionCategories(DataTable links) {
+    public void theUserNavigatesToPositionCategories(DataTable links) throws InterruptedException {
         BaseDriver.getDriver().get("https://test.mersys.io/");
-        lp.mySendKeys(lp.userNameInput, "turkeyts");
-        lp.mySendKeys(lp.passwordInput, "TechnoStudy123");
-        lp.myClick(lp.loginButton);
+        lb.mySendKeys(lb.userNameInput, "turkeyts");
+        lb.mySendKeys(lb.passwordInput, "TechnoStudy123");
+        lb.myClick(lb.loginButton);
         List<String> strLinkList = links.asList(String.class);
         for (int i = 0; i < strLinkList.size(); i++) {
-            WebElement linkWebElement = ln.getWebElement(strLinkList.get(i));
-            ln.myClick(linkWebElement);
+            WebElement linkWebElement = lb.getWebElement(strLinkList.get(i));
+            lb.myClick(linkWebElement);
         }
     }
 

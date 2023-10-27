@@ -23,7 +23,7 @@ Feature: Add Subjects functionality
       | helva  | hel  |
       | pekmez | pek  |
 
-  @SmokeTest
+
   Scenario Outline: The User Edit Subject Categories under Education
     When User Click to Education
     Then User CLick to Setup
@@ -40,7 +40,7 @@ Feature: Add Subjects functionality
       | helva      | cisse13 | er343122 |
       | pekmez     | abdul13 | er433122 |
 
-  @SmokeTest
+
   Scenario Outline: The User Delete Subject Categories under Education
     When User Click to Education
     Then User CLick to Setup
