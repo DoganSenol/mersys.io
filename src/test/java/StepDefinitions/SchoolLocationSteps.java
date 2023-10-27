@@ -1,8 +1,8 @@
 package StepDefinitions;
 
 import Pages.DialogPage;
+import Pages.LeftBar;
 import Pages.Methods;
-import Pages.SchoolPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 
-public class US007SchoolLocationSteps {
+public class SchoolLocationSteps {
 
 
 
@@ -20,15 +20,15 @@ public class US007SchoolLocationSteps {
     String shortName ="CS188" ;
     String capacity ="1" ;
     String newName = "Edit";
-    SchoolPage sp=new SchoolPage();
+    LeftBar lb=new LeftBar();
     DialogPage dp=new DialogPage();
 
     @When("Click on the element in SchoolPage")
     public void clickOnTheElementInSchoolPage(DataTable links) {
         List<String> strLinkList = links.asList(String.class);
         for (int i = 0; i < strLinkList.size(); i++) {
-            WebElement linkWebElement = sp.getWebElement(strLinkList.get(i));
-            sp.myClick(linkWebElement);
+            WebElement linkWebElement = lb.getWebElement(strLinkList.get(i));
+            lb.myClick(linkWebElement);
         }
     }
 

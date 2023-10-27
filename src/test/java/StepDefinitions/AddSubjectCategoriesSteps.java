@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.DialogPage;
-import Pages.EducationPage;
+import Pages.LeftBar;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,21 +9,21 @@ import io.cucumber.java.en.When;
 public class AddSubjectCategoriesSteps {
 
     DialogPage dp = new DialogPage();
-    EducationPage ep = new EducationPage();
+    LeftBar lb=new LeftBar();
 
     @When("User Click to Education")
     public void userClickToEducation() {
-        ep.myClick(ep.educationLink);
+        lb.myClick(lb.educationLink);
     }
 
     @Then("User CLick to Setup")
     public void userCLickToSetup() {
-        ep.myClick(ep.setupLink);
+        lb.myClick(lb.educationSetup);
     }
 
     @And("User Click to Subject Categories")
     public void userClickToSubjectCategories() {
-        ep.myClick(ep.subjectCategoriesLink);
+        lb.myClick(lb.subjectCategoriesLink);
     }
 
     @And("User Create  New Subject Categories name as {string} and code as {string}")

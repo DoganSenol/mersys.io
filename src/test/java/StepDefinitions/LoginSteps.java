@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.DialogPage;
-import Pages.LoginPage;
+import Pages.LeftBar;
 import Utilities.BaseDriver;
 import Utilities.ConfigReader;
 import io.cucumber.datatable.DataTable;
@@ -9,17 +9,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.List;
 
 public class LoginSteps extends ConfigReader {
-    LoginPage lp = new LoginPage();
+    LeftBar lb = new LeftBar();
     DialogPage dp = new DialogPage();
 
     @Given("Navigate to website")
@@ -29,13 +25,13 @@ public class LoginSteps extends ConfigReader {
 
     @And("Enter username that as {string} and password that as {string}")
     public void enterUsernameThatAsAndPasswordThatAs(String username, String password) throws IOException {
-        lp.mySendKeys(lp.userNameInput, getUsername());
-        lp.mySendKeys(lp.passwordInput, getPassword());
+        lb.mySendKeys(lb.userNameInput, getUsername());
+        lb.mySendKeys(lb.passwordInput, getPassword());
     }
 
     @When("Click login button")
     public void clickLoginButton() {
-        lp.myClick(lp.loginButton);
+        lb.myClick(lb.loginButton);
     }
 
     @Then("Verify that user logged in")
@@ -49,9 +45,9 @@ public class LoginSteps extends ConfigReader {
 
         for (int i = 0; i < items.size(); i++) {
             List<String> item = items.get(i);
-            WebElement element = lp.getWebElement(item.get(0));
+            WebElement element = lb.getWebElement(item.get(0));
             String text = item.get(1);
-            lp.mySendKeys(element, text);
+            lb.mySendKeys(element, text);
 
         }
 
@@ -59,25 +55,25 @@ public class LoginSteps extends ConfigReader {
 
     @Then("User see The invalid  username or password warning")
     public void userSeeTheInvalidUsernameOrPasswordWarning(DataTable dataTable) {
-        lp.verifyContainsText(lp.inValidUsernamePassword, "Invalid username or password");
+        lb.verifyContainsText(lb.inValidUsernamePassword, "Invalid username or password");
     }
 
     @And("Enter username and  do not enter password")
     public void enterUsernameAndDoNotEnterPassword() {
-        lp.mySendKeys(lp.userNameInput, "turkeyts");
+        lb.mySendKeys(lb.userNameInput, "turkeyts");
     }
 
     @Then("Verify blank password Error")
     public void verifyBlankPasswordError() {
 
-        lp.verifyContainsText(lp.blankPasswordError, "Password");
+        lb.verifyContainsText(lb.blankPasswordError, "Password");
 
 
     }
 
     @When("Click login button from DataTable")
     public void clickLoginButtonDataTable(DataTable dataTable) {
-        lp.myClick(lp.loginButton);
+        lb.myClick(lb.loginButton);
     }
 
     @Then("Verify that user logged in from DataTable")

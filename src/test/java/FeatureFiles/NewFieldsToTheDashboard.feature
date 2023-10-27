@@ -8,9 +8,9 @@ Feature: Adding Fields
 
   Scenario Outline: Adding New Fields to the Admin Panel
     When the user navigates to fields
-      | setup      |
-      | parameters |
-      | fields     |
+      | addingFieldsSetup |
+      | parameters        |
+      | fields            |
 
     And Click on the Element in DialogPage
       | AddButton |
