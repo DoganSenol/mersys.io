@@ -1,9 +1,8 @@
 package StepDefinitions;
 
 import Pages.DialogPage;
-import Pages.EducationPage;
 import Pages.LoginPage;
-import Pages._01_Position_LeftNav;
+import Pages.Position_LeftNav;
 import Utilities.BaseDriver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -16,10 +15,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class _01_Position {
+public class Position {
 
 
-    _01_Position_LeftNav ln = new _01_Position_LeftNav();
+    Position_LeftNav ln = new Position_LeftNav();
     LoginPage lp = new LoginPage();
     DialogPage dp = new DialogPage();
 

@@ -1,14 +1,13 @@
 package Pages;
 
-import Pages.Methods;
 import Utilities.BaseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class _01_Position_LeftNav extends Methods {
+public class Position_LeftNav extends Methods {
 
-    public _01_Position_LeftNav() {
+    public Position_LeftNav() {
         PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
