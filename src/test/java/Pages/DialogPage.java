@@ -156,20 +156,15 @@ public class DialogPage extends Methods {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     //////////////////////////////Malik//////////////////////////////////////140
+    @FindBy (css = "ms-dialog-content mat-select")
+    public WebElement fieldType;
+    @FindBy (css = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    public WebElement searchName;
+    @FindBy (css = "[aria-label='Close dialog']")
+    public WebElement closeDialog;
+    @FindBy (css = "[aria-label='Close']")
+    public WebElement closeDialogMini;
 
 
 
@@ -321,7 +316,12 @@ public class DialogPage extends Methods {
             case "selectButton": return this.selectButton;
             case "laboratoryText": return this.laboratoryText;
             case "locationType": return (WebElement) this.locationType;
-
+            case "searchButton": return this.searchButton;
+            case "searchName": return this.searchName;
+            case "deleteIcon": return this.deleteIcon;
+            case "deleteButton": return this.deleteButton;
+            case "closeDialog": return this.closeDialog;
+            case "closeDialogMini": return this.closeDialogMini;
 
 
 
