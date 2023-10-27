@@ -50,12 +50,12 @@ public class _01_Position {
 
     @And("the user clicks on the save button")
     public void theUserClicksOnTheSaveButton() {
-        dp.myClick(dp.saveeButton);
+        dp.myClick(dp.saveButton);
     }
 
     @Then("the position categories should be added successfully")
     public void thePositionCategoriesShouldBeAddedSuccessfully() {
-        dp.verifyContainsText(dp.successsMessage, "success");
+        dp.verifyContainsText(dp.successMessage, "success");
     }
 
     @And("the user clicks on the edit button")
@@ -70,7 +70,7 @@ public class _01_Position {
 
     @Then("position categories should be edited successfully")
     public void positionCategoriesShouldBeEditedSuccessfully() {
-        dp.verifyContainsText(dp.successsMessage, "updated");
+        dp.verifyContainsText(dp.successMessage, "updated");
     }
 
     @And("the user clicks on the delete button")

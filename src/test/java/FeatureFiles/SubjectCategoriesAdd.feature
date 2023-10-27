@@ -6,7 +6,7 @@ Feature: Add Subjects functionality
     When  Click login button
     Then  Verify that user logged in
 
-  @SmokeTest
+
   Scenario Outline: The User Add New Subject Categories under Education
     When  User Click to Education
     Then  User CLick to Setup
