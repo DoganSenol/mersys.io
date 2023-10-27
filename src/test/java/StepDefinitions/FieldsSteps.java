@@ -41,4 +41,20 @@ public class FieldsSteps {
         DialogPage dc=new DialogPage();
         dc.ClickEditButton();
     }
+
+    @And("User Sending Keys in DialogPage")
+    public void userSendingKeysInDialogPage(DataTable dt) {
+        List<List<String>> list=dt.asLists(String.class);
+
+        for (int i = 0; i < list.size(); i++) {
+            WebElement e=dp.getWebElement(list.get(i).get(0));
+            String text=list.get(i).get(1);
+            dp.mySendKeys(e,text);
+
+        }
+
+
+
+
+    }
 }
