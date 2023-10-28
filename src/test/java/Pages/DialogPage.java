@@ -54,6 +54,8 @@ public class DialogPage extends Methods {
     public WebElement laboratoryText;
     @FindBy(xpath="//mat-option/span")
     public List< WebElement> locationType;
+    @FindBy(xpath="(//div[@role='button'])[6]")
+    public WebElement activeButton;
 
 
 
@@ -322,6 +324,7 @@ public class DialogPage extends Methods {
             case "deleteButton": return this.deleteButton;
             case "closeDialog": return this.closeDialog;
             case "closeDialogMini": return this.closeDialogMini;
+            case "activeButton": return this.activeButton;
 
 
 
