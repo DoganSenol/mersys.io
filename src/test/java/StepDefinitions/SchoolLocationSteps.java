@@ -15,21 +15,17 @@ import java.util.List;
 public class SchoolLocationSteps {
 
 
-
-    String name ="Class188" ;
-    String shortName ="CS188" ;
-    String capacity ="1" ;
-    String newName = "Edit";
     LeftBar lb=new LeftBar();
     DialogPage dp=new DialogPage();
 
     @When("Click on the element in SchoolPage")
-    public void clickOnTheElementInSchoolPage(DataTable links) {
+    public void clickOnTheElementInSchoolPage(DataTable links)  {
         List<String> strLinkList = links.asList(String.class);
         for (int i = 0; i < strLinkList.size(); i++) {
             WebElement linkWebElement = lb.getWebElement(strLinkList.get(i));
             lb.myClick(linkWebElement);
         }
+
     }
 
     @Then("Click on the Element in DialogPage")
@@ -43,10 +39,17 @@ public class SchoolLocationSteps {
 
 
     @And("User Add the New School Locations")
-    public void UserAddTheNewSchoolLocations() {
-        dp.mySendKeys(dp.nameInput, name);
-        dp.mySendKeys(dp.shortNameInput, shortName);
-        dp.mySendKeys(dp.capacityInput, capacity);
+    public void UserAddTheNewSchoolLocations(DataTable dataTable) {
+        List<List<String>> items=dataTable.asLists(String.class);
+
+        for (int i = 0; i < items.size(); i++) {
+            List<String> item=items.get(i);
+            WebElement element= dp.getWebElement(item.get(0));
+            String text= item.get(1);
+            dp.mySendKeys(element, text);
+
+        }
+
     }
 
     @Then("User Click randomly LocationType")
@@ -58,4 +61,14 @@ public class SchoolLocationSteps {
         WebElement LocationType= dp.locationType.get(randomPick);
         dp.myClick(LocationType);
     }
-}
+
+    @Then("User Delete School Locations from Website")
+    public void userDeleteSchoolLocationsFromWebsite(DataTable dataTable) {
+        List<String> strLinkList = dataTable.asList(String.class);
+        for (int i = 0; i < strLinkList.size(); i++) {
+            WebElement linkWebElement = dp.getWebElement(strLinkList.get(i));
+            dp.myClick(linkWebElement);
+
+
+    }
+}}
