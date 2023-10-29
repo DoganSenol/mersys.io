@@ -35,7 +35,7 @@ List of Dependencies
 |           |-- FeatureFiles
 |               |-- Feature Files
 |           |-- Pages
-|               |-- DialogPage, EducationPage, LoginPage, Methods
+|               |-- DialogPage, LeftBar, Methods
 |           |-- Runners
 |               |-- TestRunnerAll
 |               |-- TestRunnerHR
@@ -49,6 +49,8 @@ List of Dependencies
 |               |-- BaseDriver
 |               |-- Config
 |               |-- ExcelUtility
+|           |-- XML
+|               |-- XMLRUNNER
 |       |-- resources
 |       |-- results
 |           |-- reports*
