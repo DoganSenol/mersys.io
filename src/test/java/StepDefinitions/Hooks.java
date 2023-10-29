@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Utilities.BaseDriver;
+import Utilities.ExcelUtility;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -14,6 +15,9 @@ public class Hooks {
     }
     @After
     public void after(Scenario scenario){
+
+        ExcelUtility.writeToExcel("src/test/java/ApachePOI/SenaryoSonuclari.xlsx",
+                scenario);
 
         if (scenario.isFailed()){
             TakesScreenshot screenshot =((TakesScreenshot) BaseDriver.getDriver());
