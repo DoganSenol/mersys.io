@@ -96,6 +96,7 @@ Feature:  School Location Functionality
     Then User Delete School Locations from Website
       | deleteIcon   |
       | deleteButton |
+    Then Success Message should be displayed
 
 
 
