@@ -55,4 +55,16 @@ Feature: School Departments Functionality
       | saveButton                      |
     Then Success Message should be displayed
 
+  Scenario: Delete The School Department
+    When  Click on the element in SchoolPage
+      | setupLink   |
+      | schoolSetup |
+      | departments |
+    And User Delete School Locations from Website
+      | deleteIcon   |
+      | deleteButton |
+    Then Success Message should be displayed
+
+
+
 
