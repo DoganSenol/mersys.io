@@ -5,7 +5,7 @@ Feature:  School Location Functionality
     And   Enter username that as "username" and password that as "password"
     When  Click login button
     Then  Verify that user logged in
-
+@SmokeTest
   Scenario Outline:Add the School Locations
     When  Click on the element in SchoolPage
       | setupLink   |
@@ -32,7 +32,7 @@ Feature:  School Location Functionality
     Examples:
       | name   | shortname | capacity |
       | class1 | c1        | 11       |
-
+  @SmokeTest
   Scenario Outline: Edit the School Locations
 
     When  Click on the element in SchoolPage
@@ -63,7 +63,7 @@ Feature:  School Location Functionality
     Examples:
       | name   | shortname | capacity |
       | class2 | cs2       | 9        |
-
+  @SmokeTest
   Scenario Outline: Negative Test in School Locations
     When  Click on the element in SchoolPage
       | setupLink   |
@@ -87,7 +87,7 @@ Feature:  School Location Functionality
       | name   | shortname | capacity |
       | class2 | cs2       | 9        |
 
-
+  @SmokeTest
   Scenario: User Delete the School Locations
     When  Click on the element in SchoolPage
       | setupLink   |
