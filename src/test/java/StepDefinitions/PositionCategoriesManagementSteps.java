@@ -27,10 +27,6 @@ public class PositionCategoriesManagementSteps {
 
     @When("the user navigates to position categories")
     public void theUserNavigatesToPositionCategories(DataTable links) throws InterruptedException {
-        BaseDriver.getDriver().get("https://test.mersys.io/");
-        lb.mySendKeys(lb.userNameInput, "turkeyts");
-        lb.mySendKeys(lb.passwordInput, "TechnoStudy123");
-        lb.myClick(lb.loginButton);
         List<String> strLinkList = links.asList(String.class);
         for (int i = 0; i < strLinkList.size(); i++) {
             WebElement linkWebElement = lb.getWebElement(strLinkList.get(i));
