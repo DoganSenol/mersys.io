@@ -1,4 +1,4 @@
-Feature: School Departmetn Functionality
+Feature: School Departments Functionality
 
   Background:
     Given Navigate to website
@@ -6,7 +6,7 @@ Feature: School Departmetn Functionality
     When  Click login button
     Then  Verify that user logged in
 
-  Scenario:
+  Scenario: Add New School Department
     When  Click on the element in SchoolPage
       | setupLink   |
       | schoolSetup |
@@ -28,3 +28,31 @@ Feature: School Departmetn Functionality
       | addInSchoolDepartmentButton |
       | saveButton                  |
     Then Success Message should be displayed
+
+  Scenario: Edit School Department
+    When  Click on the element in SchoolPage
+      | setupLink   |
+      | schoolSetup |
+      | departments |
+    Then  Click on the Element in DialogPage
+      | activeButton |
+      | editButton   |
+    And  User Edit School Departments with ApachePOI
+      | nameInput                       |
+      | codeInput                       |
+      | activeButtonOnSchoolDepartments |
+      | sectionButton                   |
+      | EditButtonInSchoolDepartments   |
+      | nameInput                       |
+      | shortNameInput                  |
+      | activeButtonOnSchoolDepartments |
+      | EditButtonInSchoolDepartments   |
+      | departmentParametersButton      |
+      | valueButton                     |
+      | keyInput                        |
+      | valueInput                      |
+      | EditConfirmInSchoolDepartments  |
+      | saveButton                      |
+    Then Success Message should be displayed
+
+
