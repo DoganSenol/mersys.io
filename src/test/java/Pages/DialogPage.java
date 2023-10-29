@@ -25,7 +25,6 @@ public class DialogPage extends Methods {
     public WebElement codeInput;
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']//button[@class='mdc-switch mdc-switch--selected mdc-switch--checked']")
     public WebElement activeButtonOn;
-
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']//button[@class='mdc-switch mdc-switch--unselected']")
     public WebElement activeButtonOff;
     @FindBy(xpath="//ms-save-button/button")
@@ -54,7 +53,7 @@ public class DialogPage extends Methods {
     public WebElement laboratoryText;
     @FindBy(xpath="//mat-option/span")
     public List< WebElement> locationType;
-    @FindBy(xpath="(//div[@role='button'])[6]")
+    @FindBy(xpath="//div[@role='button']//div[text()=' Active ']")
     public WebElement activeButton;
     @FindBy(xpath="  //span[text()='Section']")
     public WebElement sectionButton;
@@ -66,6 +65,14 @@ public class DialogPage extends Methods {
     public WebElement keyInput;
     @FindBy(xpath=" //input[@data-placeholder='Value']")
     public WebElement valueInput;
+    @FindBy(xpath = " //button[@class='mdc-switch mdc-switch--unselected']")
+    public WebElement activeButtonOnSchoolDepartments;
+    @FindBy(xpath = "//tbody/tr[1]/td[4]/div[1]/ms-edit-button[1]/button[1]/span[3]")
+    public WebElement EditButtonInSchoolDepartments;
+    @FindBy(xpath = "//span[text()='Edit']")
+    public WebElement EditConfirmInSchoolDepartments;
+    @FindBy(xpath = "//div[text()=' Value ']")
+    public WebElement valueButton;
 
 
 
