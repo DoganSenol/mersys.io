@@ -28,7 +28,7 @@ Feature: Login functionality
     When Click login button
     Then Verify blank password Error
 
-
+  @RegressionTest
   Scenario Outline: Login with valid username and password
     And Enter username and password
       | userNameInput | <username> |

@@ -5,7 +5,7 @@ Feature: School Departments Functionality
     And   Enter username that as "username" and password that as "password"
     When  Click login button
     Then  Verify that user logged in
-
+@RegressionTest
   Scenario: Add New School Department
     When  Click on the element in SchoolPage
       | setupLink   |
@@ -28,7 +28,7 @@ Feature: School Departments Functionality
       | addInSchoolDepartmentButton |
       | saveButton                  |
     Then Success Message should be displayed
-
+  @RegressionTest
   Scenario: Edit School Department
     When  Click on the element in SchoolPage
       | setupLink   |
@@ -54,7 +54,7 @@ Feature: School Departments Functionality
       | EditConfirmInSchoolDepartments  |
       | saveButton                      |
     Then Success Message should be displayed
-
+  @RegressionTest
   Scenario: Delete The School Department
     When  Click on the element in SchoolPage
       | setupLink   |

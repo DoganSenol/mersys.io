@@ -9,7 +9,7 @@ import org.testng.annotations.AfterClass;
 
 @CucumberOptions
         (
-                tags = "@SmokeTest",
+                tags = "@RegressionTest",
                 features = "src/test/java/FeatureFiles",
                 glue = "StepDefinitions",
                 plugin = "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
@@ -18,7 +18,7 @@ import org.testng.annotations.AfterClass;
         )
 
 
-public class TestRunnerExtentReport extends AbstractTestNGCucumberTests {
+public class RegressionTestRunner extends AbstractTestNGCucumberTests {
     @AfterClass
     public static void writeExtentReport() {
         ExtentService.getInstance().setSystemInfo("Windows Username",  System.getProperty("user.name"));
@@ -26,10 +26,7 @@ public class TestRunnerExtentReport extends AbstractTestNGCucumberTests {
         ExtentService.getInstance().setSystemInfo("Username", "Senol");
         ExtentService.getInstance().setSystemInfo("Application Name", "Campus");
         ExtentService.getInstance().setSystemInfo("Operating System Info", System.getProperty("os.name"));
-        ExtentService.getInstance().setSystemInfo("Department", "QA");
-        ExtentService.getInstance().setSystemInfo("Ek Satır", "Açıklama");
-        ExtentService.getInstance().setSystemInfo("Ek Satır", "Açıklama");
-        ExtentService.getInstance().setSystemInfo("Ek Satır", "Açıklama");
-        ExtentService.getInstance().setSystemInfo("Ek Satır", "Açıklama");
+        ExtentService.getInstance().setSystemInfo("Department", "QA-Lead");
+
     }
 }
