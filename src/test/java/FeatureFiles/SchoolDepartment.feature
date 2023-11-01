@@ -7,7 +7,7 @@ Feature: School Departments Functionality
     Then  Verify that user logged in
 @RegressionTest
   Scenario: Add New School Department
-    When  Click on the element in SchoolPage
+    When  Click on the element in LeftBar
       | setupLink   |
       | schoolSetup |
       | departments |
@@ -30,7 +30,7 @@ Feature: School Departments Functionality
     Then Success Message should be displayed
   @RegressionTest
   Scenario: Edit School Department
-    When  Click on the element in SchoolPage
+    When  Click on the element in LeftBar
       | setupLink   |
       | schoolSetup |
       | departments |
@@ -56,7 +56,7 @@ Feature: School Departments Functionality
     Then Success Message should be displayed
   @RegressionTest
   Scenario: Delete The School Department
-    When  Click on the element in SchoolPage
+    When  Click on the element in LeftBar
       | setupLink   |
       | schoolSetup |
       | departments |

@@ -36,6 +36,13 @@ public class LeftBar extends Methods{
     public WebElement blankPasswordError;
     @FindBy(xpath="   //span[text()= 'Departments']")
     public WebElement departments;
+    @FindBy(xpath="(//span[text()='Bank Accounts'])[1]")
+    public WebElement bankAccounts;
+
+
+
+
+
 
 
     ////////////////////////////Emre///////////////////////////////////
@@ -84,6 +91,8 @@ public class LeftBar extends Methods{
             case "parameters" : return this.parameters;
             case "fields" : return  this.fields;
             case "departments": return this. departments;
+            case "bankAccounts": return this. bankAccounts;
+
         }
 
         return null;

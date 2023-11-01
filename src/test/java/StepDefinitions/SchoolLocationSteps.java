@@ -18,8 +18,8 @@ public class SchoolLocationSteps {
     LeftBar lb=new LeftBar();
     DialogPage dp=new DialogPage();
 
-    @When("Click on the element in SchoolPage")
-    public void clickOnTheElementInSchoolPage(DataTable links)  {
+    @When("Click on the element in LeftBar")
+    public void clickOnTheElementInLeftBar(DataTable links)  {
         List<String> strLinkList = links.asList(String.class);
         for (int i = 0; i < strLinkList.size(); i++) {
             WebElement linkWebElement = lb.getWebElement(strLinkList.get(i));
