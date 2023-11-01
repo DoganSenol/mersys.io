@@ -7,7 +7,7 @@ Feature:  School Location Functionality
     Then  Verify that user logged in
 @SmokeTest
   Scenario Outline:Add the School Locations
-    When  Click on the element in SchoolPage
+    When  Click on the element in LeftBar
       | setupLink   |
       | schoolSetup |
       | Locations   |
@@ -35,7 +35,7 @@ Feature:  School Location Functionality
   @SmokeTest
   Scenario Outline: Edit the School Locations
 
-    When  Click on the element in SchoolPage
+    When  Click on the element in LeftBar
       | setupLink   |
       | schoolSetup |
       | Locations   |
@@ -65,7 +65,7 @@ Feature:  School Location Functionality
       | class2 | cs2       | 9        |
   @SmokeTest
   Scenario Outline: Negative Test in School Locations
-    When  Click on the element in SchoolPage
+    When  Click on the element in LeftBar
       | setupLink   |
       | schoolSetup |
       | Locations   |
@@ -89,7 +89,7 @@ Feature:  School Location Functionality
 
   @SmokeTest
   Scenario: User Delete the School Locations
-    When  Click on the element in SchoolPage
+    When  Click on the element in LeftBar
       | setupLink   |
       | schoolSetup |
       | Locations   |

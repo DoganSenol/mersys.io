@@ -73,6 +73,16 @@ public class DialogPage extends Methods {
     public WebElement EditConfirmInSchoolDepartments;
     @FindBy(xpath = "//div[text()=' Value ']")
     public WebElement valueButton;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='iban']//input")
+    public WebElement ibanInput;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']//input")
+    public WebElement integrationCode;
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[3]")
+    public WebElement currencySelect;
+    @FindBy(xpath = "//mat-option//span")
+    public List< WebElement> currencyType;
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    public  WebElement nameInputBank;
 
 
 
