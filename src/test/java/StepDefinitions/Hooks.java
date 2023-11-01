@@ -17,7 +17,7 @@ public class Hooks {
     public void after(Scenario scenario){
 
         ExcelUtility.writeToExcel("src/test/java/ApachePOI/SenaryoSonuclari.xlsx",
-                scenario);
+                scenario,BaseDriver.getThreadBrowserNAme());
 
         if (scenario.isFailed()){
             TakesScreenshot screenshot =((TakesScreenshot) BaseDriver.getDriver());

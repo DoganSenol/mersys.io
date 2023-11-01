@@ -55,4 +55,8 @@ public class BaseDriver {
         }
 
     }
+
+    public static String getThreadBrowserNAme(){
+        return threadBrowserName.get();
+    }
 }
