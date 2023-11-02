@@ -20,7 +20,7 @@ public class BankAccountsSteps {
     public void userAddBankAccountsWithApachePOI(DataTable dataTable) {
 
         ArrayList<ArrayList<String>> table=
-                ExcelUtility.getData("src/test/java/ApachePOI/CampusBankAccounts.xlsx","BankAccounts",6);
+                ExcelUtility.getData("src/test/java/ApachePOI/CampusTestData.xlsx","BankAccounts",6);
         for (int i = 0; i < table.size(); i++) {
             ArrayList<String> row= table.get(i);
             dp.myClick(dp.AddButton);
@@ -43,7 +43,7 @@ public class BankAccountsSteps {
     public void userEditBankAccountsWithApachePOI(DataTable dataTable) {
 
         ArrayList<ArrayList<String>> table=
-                ExcelUtility.getData("src/test/java/ApachePOI/CampusBankAccounts.xlsx","BankAccounts",6);
+                ExcelUtility.getData("src/test/java/ApachePOI/CampusTestData.xlsx","BankAccounts",6);
 
         for (int i = 0; i < table.size(); i++) {
             ArrayList<String> row= table.get(i);
@@ -68,7 +68,7 @@ public class BankAccountsSteps {
     @Then("User Delete BankAccounts with ApachePOI")
     public void userDeleteBankAccountsWithApachePOI(DataTable dataTable) {
         ArrayList<ArrayList<String>> table=
-                ExcelUtility.getData("src/test/java/ApachePOI/CampusBankAccounts.xlsx","BankAccounts",6);
+                ExcelUtility.getData("src/test/java/ApachePOI/CampusTestData.xlsx","BankAccounts",6);
 
         for (int i = 0; i < table.size(); i++) {
             ArrayList<String> row= table.get(i);

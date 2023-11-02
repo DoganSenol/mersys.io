@@ -38,6 +38,8 @@ public class LeftBar extends Methods{
     public WebElement departments;
     @FindBy(xpath="(//span[text()='Bank Accounts'])[1]")
     public WebElement bankAccounts;
+    @FindBy(xpath="//span[text()='Nationalities']")
+    public WebElement nationalities;
 
 
 
@@ -92,6 +94,7 @@ public class LeftBar extends Methods{
             case "fields" : return  this.fields;
             case "departments": return this. departments;
             case "bankAccounts": return this. bankAccounts;
+            case "nationalities": return this.nationalities;
 
         }
 
