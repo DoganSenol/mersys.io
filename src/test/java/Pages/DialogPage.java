@@ -83,6 +83,8 @@ public class DialogPage extends Methods {
     public List< WebElement> currencyType;
     @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
     public  WebElement nameInputBank;
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    public  WebElement nameInputNationalities;
 
 
 
