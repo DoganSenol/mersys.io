@@ -55,8 +55,6 @@ public class DialogPage extends Methods {
     public List< WebElement> locationType;
     @FindBy(xpath="//div[@role='button']//div[text()=' Active ']")
     public WebElement activeButton;
-    @FindBy(xpath="  //span[text()='Section']")
-    public WebElement sectionButton;
     @FindBy(xpath=" //span[text()='Add']")
     public WebElement addInSchoolDepartmentButton;
     @FindBy(xpath=" (//span[@class='mdc-tab__content'])[3]")

@@ -93,7 +93,7 @@ Feature:  School Location Functionality
       | setupLink   |
       | schoolSetup |
       | Locations   |
-    Then User Delete School Locations from Website
+    Then User Delete The Element On DialogPage
       | deleteIcon   |
       | deleteButton |
     Then Success Message should be displayed
