@@ -5,7 +5,8 @@ Feature: School Departments Functionality
     And   Enter username that as "username" and password that as "password"
     When  Click login button
     Then  Verify that user logged in
-@RegressionTest
+
+  @RegressionTest
   Scenario: Add New School Department
     When  Click on the element in LeftBar
       | setupLink   |
@@ -14,20 +15,13 @@ Feature: School Departments Functionality
     Then  Click on the Element in DialogPage
       | AddButton |
     And User Add New School Departments with ApachePoi
-      | nameInput                   |
-      | codeInput                   |
-      | activeButtonOn              |
-      | sectionButton               |
-      | activeButtonOn              |
-      | nameInput                   |
-      | shortNameInput              |
-      | addInSchoolDepartmentButton |
-      | departmentParametersButton  |
-      | keyInput                    |
-      | valueInput                  |
-      | addInSchoolDepartmentButton |
-      | saveButton                  |
+      | nameInput      |
+      | codeInput      |
+      | activeButtonOn |
+      | saveButton     |
+      | successMessage |
     Then Success Message should be displayed
+
   @RegressionTest
   Scenario: Edit School Department
     When  Click on the element in LeftBar
@@ -38,29 +32,20 @@ Feature: School Departments Functionality
       | activeButton |
       | editButton   |
     And  User Edit School Departments with ApachePOI
-      | nameInput                       |
-      | codeInput                       |
-      | activeButtonOnSchoolDepartments |
-      | sectionButton                   |
-      | EditButtonInSchoolDepartments   |
-      | nameInput                       |
-      | shortNameInput                  |
-      | activeButtonOnSchoolDepartments |
-      | EditButtonInSchoolDepartments   |
-      | departmentParametersButton      |
-      | valueButton                     |
-      | keyInput                        |
-      | valueInput                      |
-      | EditConfirmInSchoolDepartments  |
-      | saveButton                      |
+      | nameInput        |
+      | codeInput        |
+      | activeButtonOff  |
+      | saveButton       |
+      | successMessage   |
     Then Success Message should be displayed
+
   @RegressionTest
   Scenario: Delete The School Department
     When  Click on the element in LeftBar
       | setupLink   |
       | schoolSetup |
       | departments |
-    And User Delete School Locations from Website
+    And User Delete The Element On DialogPage
       | deleteIcon   |
       | deleteButton |
     Then Success Message should be displayed
