@@ -75,7 +75,7 @@ public class DialogPage extends Methods {
     public WebElement valueButton;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='iban']//input")
     public WebElement ibanInput;
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']//input")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
     public WebElement integrationCode;
     @FindBy(xpath = "(//mat-select[@role='combobox'])[3]")
     public WebElement currencySelect;
@@ -85,6 +85,15 @@ public class DialogPage extends Methods {
     public  WebElement nameInputBank;
     @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
     public  WebElement nameInputNationalities;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']//input")
+    public  WebElement descriptionInput;
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
+    public  WebElement priorityInput;
+    @FindBy(xpath = "  //span[text()='Save & Close']")
+    public  WebElement saveCloseButton;
+    @FindBy(xpath = "//input[@data-placeholder='Description']")
+    public  WebElement descriptionField;
+
 
 
 
