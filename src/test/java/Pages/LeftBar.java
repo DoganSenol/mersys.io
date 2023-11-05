@@ -81,7 +81,8 @@ public class LeftBar extends Methods{
     public WebElement parameters;
     @FindBy(xpath = "//span[text()='Fields']")
     public WebElement fields;
-
+    @FindBy(xpath = "//span[text()='Grade Levels']")
+    public WebElement gradeLevels;
 
 
 
@@ -113,6 +114,7 @@ public class LeftBar extends Methods{
             case "attestations": return this.attestations;
 
 
+            case "gradeLevels": return this.gradeLevels;
 
         }
 

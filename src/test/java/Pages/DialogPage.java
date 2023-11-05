@@ -204,6 +204,10 @@ public class DialogPage extends Methods {
     public WebElement closeDialog;
     @FindBy (css = "[aria-label='Close']")
     public WebElement closeDialogMini;
+    @FindBy(css="th~th div>div")
+    public WebElement nameButton;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
+    public WebElement orderInput;
 
 
 
@@ -362,6 +366,8 @@ public class DialogPage extends Methods {
             case "closeDialog": return this.closeDialog;
             case "closeDialogMini": return this.closeDialogMini;
             case "activeButton": return this.activeButton;
+            case "nameButton": return this.nameButton;
+            case "orderInput": return this.orderInput;
 
 
 
