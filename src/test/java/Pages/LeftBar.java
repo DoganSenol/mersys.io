@@ -46,6 +46,9 @@ public class LeftBar extends Methods{
     public WebElement setupHumanResources;
     @FindBy(xpath="  (//span[text()='Attestations'])[1]")
     public WebElement attestations;
+    @FindBy(xpath="//fuse-nav-vertical-item//span[text()='Document Types']")
+    public WebElement documentTypes;
+
 
 
 
@@ -111,6 +114,7 @@ public class LeftBar extends Methods{
             case "discounts": return this.discounts;
             case "setupHumanResources": return this.setupHumanResources;
             case "attestations": return this.attestations;
+            case "documentTypes": return this.documentTypes;
 
 
 
