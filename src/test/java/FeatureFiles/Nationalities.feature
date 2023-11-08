@@ -7,7 +7,7 @@ Feature: Nationalities functionality
     When  Click login button
     Then  Verify that user logged in
 
-  Scenario:
+  Scenario: The User Add Edit And Delete Nationalities under Setup -> Parameters -> Nationalities
     When  Click on the element in LeftBar
       | setupLink     |
       | parameters    |

@@ -91,6 +91,27 @@ public class DialogPage extends Methods {
     public  WebElement saveCloseButton;
     @FindBy(xpath = "//input[@data-placeholder='Description']")
     public  WebElement descriptionField;
+    @FindBy(xpath = "   (//mat-select[@role='combobox'])[3]")
+    public  WebElement stageLink;
+    @FindBy(xpath = "//mat-option//span")
+    public  List<WebElement> selectStage;
+    @FindBy(xpath = "//textarea[@formcontrolname='description']")
+    public  WebElement description;
+    @FindBy(xpath = " //mat-slide-toggle[@formcontrolname='required']//button[@class='mdc-switch mdc-switch--selected mdc-switch--checked']")
+    public  WebElement requiredChecked;
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='required']//button[@class='mdc-switch mdc-switch--unselected']")
+    public  WebElement requiredUnchecked;
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='useCamera']//button[@class='mdc-switch mdc-switch--unselected']\n")
+    public  WebElement useCamUnchecked;
+
+
+
+
+
+
+
+
+
 
 
 
