@@ -55,5 +55,5 @@ Feature: Fields Functionality
 
     Examples:
       | name    | code      | newName |
-      | qwertyu | asdfghjkl | zxcvbnm |
+      | qwertyuu | asdfghjkl | zxcvbnm |
 
