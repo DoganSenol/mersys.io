@@ -85,6 +85,28 @@ public class LeftBar extends Methods{
     @FindBy(xpath = "//span[text()='Fields']")
     public WebElement fields;
 
+    ///////////////////////////Tuba/////////////////////////////////////
+    public void Position_LeftNav() {
+        PageFactory.initElements(BaseDriver.getDriver(), this);
+    }
+    @FindBy(xpath = "//span[text()='Human Resources']")
+    public WebElement humanResources1;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    public WebElement setup;
+
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    public WebElement positionCategories1;
+
+    @FindBy(xpath = "(//*[text()='Positions'])[1]")
+    public WebElement positions;
+
+    @FindBy(xpath = "(//*[text()='Search'])[1]")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "(//*[@class='mdc-switch__ripple'])[1]")
+    public WebElement option;
+
 
 
 
@@ -115,6 +137,12 @@ public class LeftBar extends Methods{
             case "setupHumanResources": return this.setupHumanResources;
             case "attestations": return this.attestations;
             case "documentTypes": return this.documentTypes;
+            case "human resources1": return this.humanResources;
+            case "setup": return this.setup;
+            case "position categories1": return this.positionCategories;
+            case "positions": return this.positions;
+            case "search": return this.searchButton;
+            case "aktiv": return this.option;
 
 
 
