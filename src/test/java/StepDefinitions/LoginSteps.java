@@ -20,13 +20,13 @@ public class LoginSteps extends ConfigReader {
 
     @Given("Navigate to website")
     public void navigateToWebsite() throws IOException {
-        BaseDriver.getDriver().get(getUrl());
+        BaseDriver.getDriver().get("https://test.mersys.io");
     }
 
     @And("Enter username that as {string} and password that as {string}")
     public void enterUsernameThatAsAndPasswordThatAs(String username, String password) throws IOException {
-        lb.mySendKeys(lb.userNameInput, getUsername());
-        lb.mySendKeys(lb.passwordInput, getPassword());
+        lb.mySendKeys(lb.userNameInput, "turkeyts");
+        lb.mySendKeys(lb.passwordInput, "TechnoStudy123");
     }
 
     @When("Click login button")
