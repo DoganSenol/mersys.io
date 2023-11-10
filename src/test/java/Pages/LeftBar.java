@@ -88,7 +88,27 @@ public class LeftBar extends Methods{
     public WebElement gradeLevels;
 
 
+/////////////////////////////////Tuba////////////////////////////////////
 
+    @FindBy(xpath = "//span[text()='Human Resources']")
+    public WebElement humanResources1;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    public WebElement setup;
+
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    public WebElement positionCategories1;
+
+    @FindBy(xpath = "(//*[text()='Positions'])[1]")
+    public WebElement positions;
+
+    @FindBy(xpath = "(//*[text()='Search'])[1]")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "(//*[@class='mdc-switch__ripple'])[1]")
+    public WebElement option;
+
+    ////////////////////////////////////////////////////////////
 
     public WebElement getWebElement(String stringElement) {
         switch (stringElement) {
@@ -103,9 +123,9 @@ public class LeftBar extends Methods{
             case "loginButton": return this.loginButton;
             case "inValidUsernamePassword" : return this.inValidUsernamePassword;
             case "blankPasswordError" : return this.blankPasswordError;
-            case "human resources": return this.humanResources;
+            case "human resources1": return this.humanResources1;
             case "positionCategoriesSetup": return this.positionCategoriesSetup;
-            case "position categories": return this.positionCategories;
+            case "position categories1": return this.positionCategories1;
             case "addingFieldsSetup" : return this.addingFieldsSetup;
             case "parameters" : return this.parameters;
             case "fields" : return  this.fields;
@@ -116,6 +136,13 @@ public class LeftBar extends Methods{
             case "setupHumanResources": return this.setupHumanResources;
             case "attestations": return this.attestations;
             case "documentTypes": return this.documentTypes;
+
+            case "human resources": return this.humanResources;
+            case "setup": return this.setup;
+            case "position categories": return this.positionCategories;
+            case "positions": return this.positions;
+            case "searchButton": return this.searchButton;
+            case "active": return this.option;
 
 
             case "gradeLevels": return this.gradeLevels;
