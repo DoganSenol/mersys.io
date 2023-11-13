@@ -46,5 +46,5 @@ Feature: Grade Levels Functionality
 
     Examples:
       | name    | shortName      | newName          | order |
-      | AAAAA   | GUJU           | AAAAAAUPDATED    |   1   |
+      | AAAAA1   | GUJU1           | AAAAAAUPDATED1    |   2   |
 
