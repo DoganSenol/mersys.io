@@ -139,7 +139,8 @@ public class DialogPage extends Methods {
 
     ///////////////////Tuba/////////////////////////////////////////////// 65.Satir
 
-
+    @FindBy (xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME']//input")
+    public WebElement searchShortName;
 
 
 
@@ -219,7 +220,7 @@ public class DialogPage extends Methods {
     //////////////////////////////Malik//////////////////////////////////////140
     @FindBy (css = "ms-dialog-content mat-select")
     public WebElement fieldType;
-    @FindBy (css = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    @FindBy (xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
     public WebElement searchName;
     @FindBy (css = "[aria-label='Close dialog']")
     public WebElement closeDialog;
