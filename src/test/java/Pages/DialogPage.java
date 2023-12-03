@@ -105,18 +105,6 @@ public class DialogPage extends Methods {
     public  WebElement useCamUnchecked;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     public void ClickEditButton() throws InterruptedException {
         myClick(searchButton);
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//button[@class='mdc-button mat-mdc-button mat-accent mat-flat-button mat-mdc-button-base']/*"), 0));
@@ -145,34 +133,6 @@ public class DialogPage extends Methods {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //////////////////////////////Emre//////////////////////////////////////// 100
 
     @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
@@ -194,29 +154,6 @@ public class DialogPage extends Methods {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //////////////////////////////Malik//////////////////////////////////////140
     @FindBy (css = "ms-dialog-content mat-select")
     public WebElement fieldType;
@@ -230,137 +167,6 @@ public class DialogPage extends Methods {
     public WebElement nameButton;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
     public WebElement orderInput;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //////////////////////////////Onur//////////////////////////////////////180
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //////////////////////////////Murat//////////////////////////////////////220
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public WebElement getWebElement(String stringElement){
         switch (stringElement){

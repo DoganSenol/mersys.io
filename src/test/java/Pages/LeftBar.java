@@ -52,27 +52,13 @@ public class LeftBar extends Methods{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    ////////////////////////////Emre///////////////////////////////////
+    ///////////////////////////Emre///////////////////////////////////
     @FindBy(xpath = "//span[text()='Human Resources']")
     public WebElement humanResources;
     @FindBy(xpath = "(//span[text()='Setup'])[3]")
     public WebElement positionCategoriesSetup;
     @FindBy(xpath = "//span[text()='Position Categories']")
     public WebElement positionCategories;
-
-
-
 
 
 
@@ -136,15 +122,12 @@ public class LeftBar extends Methods{
             case "setupHumanResources": return this.setupHumanResources;
             case "attestations": return this.attestations;
             case "documentTypes": return this.documentTypes;
-
             case "human resources": return this.humanResources;
             case "setup": return this.setup;
             case "position categories": return this.positionCategories;
             case "positions": return this.positions;
             case "searchButton": return this.searchButton;
             case "active": return this.option;
-
-
             case "gradeLevels": return this.gradeLevels;
 
         }
